@@ -13,6 +13,8 @@ Before running PAPET do the following:
 - Add "%PRISM_DIR%\lib\prism.jar;%PRISM_DIR%\classes;%PRISM_DIR;%PRISM_DIR\lib\*; to the environment variable CP
 - Copy the 'myprism' file to the [PRISM directory]\bin ('myprism' file is in the [PAPET directory]\PRISM folder)
 
+- Change the PAPET.program.location in the 'PAPET_v01.R' file to the location of the PAPET in your local machine
+
 ---------------------------------
 How To use "PAPET":
   
