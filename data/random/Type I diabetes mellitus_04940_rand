@@ -1,0 +1,83 @@
+ctmc
+
+const int Max = 1;
+const int Max_action = 20;
+
+module hsa04940 
+hsa3382  : [0..Max] init 0;
+hsa3382_a  : [0..Max] init 0;
+hsa940  : [0..Max] init 1;
+hsa940_a  : [0..Max] init 0;
+hsa3592  : [0..Max] init 0;
+hsa3592_a  : [0..Max] init 0;
+hsa1363  : [0..Max] init 0;
+hsa1363_a  : [0..Max] init 0;
+hsa941  : [0..Max] init 1;
+hsa941_a  : [0..Max] init 0;
+hsa5798  : [0..Max] init 0;
+hsa5798_a  : [0..Max] init 0;
+hsa2571  : [0..Max] init 0;
+hsa2571_a  : [0..Max] init 0;
+hsa3329  : [0..Max] init 1;
+hsa3329_a  : [0..Max] init 0;
+hsa3558  : [0..Max] init 1;
+hsa3558_a  : [0..Max] init 0;
+hsa3630  : [0..Max] init 0;
+hsa3630_a  : [0..Max] init 0;
+hsa356  : [0..Max] init 0;
+hsa356_a  : [0..Max] init 0;
+hsa3002  : [0..Max] init 0;
+hsa3002_a  : [0..Max] init 0;
+hsa100509457  : [0..Max] init 1;
+hsa100509457_a  : [0..Max] init 0;
+hsa3105  : [0..Max] init 0;
+hsa3105_a  : [0..Max] init 0;
+hsa355  : [0..Max] init 0;
+hsa355_a  : [0..Max] init 0;
+hsa3458  : [0..Max] init 0;
+hsa3458_a  : [0..Max] init 0;
+hsa5551  : [0..Max] init 1;
+hsa5551_a  : [0..Max] init 0;
+hsa3552  : [0..Max] init 0;
+hsa3552_a  : [0..Max] init 0;
+hsa7124  : [0..Max] init 1;
+hsa7124_a  : [0..Max] init 0;
+hsa4049  : [0..Max] init 1;
+hsa4049_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+ []
+( hsa941_a > 0 ) & ( hsa940 > 0 ) & ( hsa940_a < Max )
+-> (1) * hsa941_a * hsa940 :
+(hsa940' = hsa940-1) & (hsa940_a' = hsa940_a + 1);
+
+ []
+( hsa941 > 0 ) & ( hsa941_a < Max )
+-> (1) *hsa941 :
+(hsa941' = hsa941-1) & (hsa941_a' = hsa941_a + 1);
+
+ []
+( hsa356_a > 0 ) & ( hsa355 > 0 ) & ( hsa355_a < Max )
+-> (1) * hsa356_a * hsa355 :
+(hsa355' = hsa355-1) & (hsa355_a' = hsa355_a + 1);
+
+ []
+( hsa356 > 0 ) & ( hsa356_a < Max )
+-> (1) *hsa356 :
+(hsa356' = hsa356-1) & (hsa356_a' = hsa356_a + 1);
+
+ []
+( hsa940_a > 0) & ( action < Max_action )
+-> (1) * hsa940_a :
+(hsa940_a' = hsa940_a - 1) & ( action' = action + 1);
+
+ []
+( hsa355_a > 0) & ( action < Max_action )
+-> (1) * hsa355_a :
+(hsa355_a' = hsa355_a - 1) & ( action' = action + 1);
+
+endmodule
+rewards
+true:action;
+endrewards

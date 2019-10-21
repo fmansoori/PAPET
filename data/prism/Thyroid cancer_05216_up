@@ -1,0 +1,225 @@
+ctmc
+
+const int Max =  5 ;
+const int Max_action = 20;
+
+module hsa05216 
+hsa3265  : [0..Max] init 0;
+hsa3265_a  : [0..Max] init 0;
+hsa3845  : [0..Max] init 0;
+hsa3845_a  : [0..Max] init 0;
+hsa5468  : [0..Max] init 0;
+hsa5468_a  : [0..Max] init 0;
+hsa673  : [0..Max] init 0;
+hsa673_a  : [0..Max] init 0;
+hsa5594  : [0..Max] init  1 ;
+hsa5594_a  : [0..Max] init 0;
+hsa5595  : [0..Max] init  1 ;
+hsa5595_a  : [0..Max] init 0;
+hsa5604  : [0..Max] init 0;
+hsa5604_a  : [0..Max] init 0;
+hsa5605  : [0..Max] init 0;
+hsa5605_a  : [0..Max] init 0;
+hsa7849  : [0..Max] init 0;
+hsa7849_a  : [0..Max] init 0;
+hsa7157  : [0..Max] init 0;
+hsa7157_a  : [0..Max] init 0;
+hsa6256  : [0..Max] init 0;
+hsa6256_a  : [0..Max] init 0;
+hsa1499  : [0..Max] init 0;
+hsa1499_a  : [0..Max] init 0;
+hsa4609  : [0..Max] init  2 ;
+hsa4609_a  : [0..Max] init 0;
+hsa999  : [0..Max] init 0;
+hsa999_a  : [0..Max] init 0;
+hsa595  : [0..Max] init 0;
+hsa595_a  : [0..Max] init 0;
+hsa5979  : [0..Max] init 0;
+hsa5979_a  : [0..Max] init 0;
+hsa10342  : [0..Max] init 0;
+hsa10342_a  : [0..Max] init 0;
+hsa51176  : [0..Max] init  2 ;
+hsa51176_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+ []
+( hsa3265_a > 0 ) & ( hsa673 > 0 ) & ( hsa673_a < Max )
+-> (1) * hsa3265_a * hsa673 :
+(hsa673' = hsa673-1) & (hsa673_a' = hsa673_a + 1);
+
+ []
+( hsa5468_a > 0 ) & ( hsa6256 > 0 ) & ( hsa6256_a < Max )
+-> (1) * hsa5468_a * hsa6256 :
+(hsa6256' = hsa6256-1) & (hsa6256_a' = hsa6256_a + 1);
+
+ []
+( hsa5468 > 0 ) & ( hsa5468_a < Max )
+-> (1) *hsa5468 :
+(hsa5468' = hsa5468-1) & (hsa5468_a' = hsa5468_a + 1);
+
+ []
+( hsa673_a > 0 ) & ( hsa5604 > 0 ) & ( hsa5604_a < Max )
+-> (1) * hsa673_a * hsa5604 :
+(hsa5604' = hsa5604-1) & (hsa5604_a' = hsa5604_a + 1);
+
+ []
+( hsa673_a > 0 ) & ( hsa5605 > 0 ) & ( hsa5605_a < Max )
+-> (1) * hsa673_a * hsa5605 :
+(hsa5605' = hsa5605-1) & (hsa5605_a' = hsa5605_a + 1);
+
+ []
+( hsa5604_a > 0 ) & ( hsa5594 > 0 ) & ( hsa5594_a < Max )
+-> (1) * hsa5604_a * hsa5594 :
+(hsa5594' = hsa5594-1) & (hsa5594_a' = hsa5594_a + 1);
+
+ []
+( hsa5604_a > 0 ) & ( hsa5595 > 0 ) & ( hsa5595_a < Max )
+-> (1) * hsa5604_a * hsa5595 :
+(hsa5595' = hsa5595-1) & (hsa5595_a' = hsa5595_a + 1);
+
+ []
+( hsa7849_a > 0 ) & ( hsa6256 > 0 ) & ( hsa6256_a < Max )
+-> (1) * hsa7849_a * hsa6256 :
+(hsa6256' = hsa6256-1) & (hsa6256_a' = hsa6256_a + 1);
+
+ []
+( hsa7849 > 0 ) & ( hsa7849_a < Max )
+-> (1) *hsa7849 :
+(hsa7849' = hsa7849-1) & (hsa7849_a' = hsa7849_a + 1);
+
+ []
+( hsa1499_a > 0 ) & ( hsa51176 > 0 ) & ( hsa51176_a < Max )
+-> (1) * hsa1499_a * hsa51176 :
+(hsa51176' = hsa51176-1) & (hsa51176_a' = hsa51176_a + 1);
+
+ []
+( hsa1499 > 0 ) & ( hsa1499_a < Max )
+-> (1) *hsa1499 :
+(hsa1499' = hsa1499-1) & (hsa1499_a' = hsa1499_a + 1);
+
+ []
+( hsa5605_a > 0 ) & ( hsa5594 > 0 ) & ( hsa5594_a < Max )
+-> (1) * hsa5605_a * hsa5594 :
+(hsa5594' = hsa5594-1) & (hsa5594_a' = hsa5594_a + 1);
+
+ []
+( hsa5605_a > 0 ) & ( hsa5595 > 0 ) & ( hsa5595_a < Max )
+-> (1) * hsa5605_a * hsa5595 :
+(hsa5595' = hsa5595-1) & (hsa5595_a' = hsa5595_a + 1);
+
+ []
+( hsa3845_a > 0 ) & ( hsa673 > 0 ) & ( hsa673_a < Max )
+-> (1) * hsa3845_a * hsa673 :
+(hsa673' = hsa673-1) & (hsa673_a' = hsa673_a + 1);
+
+ []
+( hsa5979_a > 0 ) & ( hsa3265 > 0 ) & ( hsa3265_a < Max )
+-> (1) * hsa5979_a * hsa3265 :
+(hsa3265' = hsa3265-1) & (hsa3265_a' = hsa3265_a + 1);
+
+ []
+( hsa5979 > 0 ) & ( hsa5979_a < Max )
+-> (1) *hsa5979 :
+(hsa5979' = hsa5979-1) & (hsa5979_a' = hsa5979_a + 1);
+
+ []
+( hsa5979_a > 0 ) & ( hsa3845 > 0 ) & ( hsa3845_a < Max )
+-> (1) * hsa5979_a * hsa3845 :
+(hsa3845' = hsa3845-1) & (hsa3845_a' = hsa3845_a + 1);
+
+ []
+( hsa5979 > 0 ) & ( hsa5979_a < Max )
+-> (1) *hsa5979 :
+(hsa5979' = hsa5979-1) & (hsa5979_a' = hsa5979_a + 1);
+
+ []
+( hsa10342_a > 0 ) & ( hsa3265 > 0 ) & ( hsa3265_a < Max )
+-> (1) * hsa10342_a * hsa3265 :
+(hsa3265' = hsa3265-1) & (hsa3265_a' = hsa3265_a + 1);
+
+ []
+( hsa10342 > 0 ) & ( hsa10342_a < Max )
+-> (1) *hsa10342 :
+(hsa10342' = hsa10342-1) & (hsa10342_a' = hsa10342_a + 1);
+
+ []
+( hsa10342_a > 0 ) & ( hsa3845 > 0 ) & ( hsa3845_a < Max )
+-> (1) * hsa10342_a * hsa3845 :
+(hsa3845' = hsa3845-1) & (hsa3845_a' = hsa3845_a + 1);
+
+ []
+( hsa10342 > 0 ) & ( hsa10342_a < Max )
+-> (1) *hsa10342 :
+(hsa10342' = hsa10342-1) & (hsa10342_a' = hsa10342_a + 1);
+
+ []
+( hsa51176_a > 0 ) & ( hsa4609 > 0 ) & ( hsa4609_a < Max )
+-> (1) * hsa51176_a * hsa4609 :
+(hsa4609' = hsa4609-1) & (hsa4609_a' = hsa4609_a + 1);
+
+ []
+( hsa51176_a > 0 ) & ( hsa595 > 0 ) & ( hsa595_a < Max )
+-> (1) * hsa51176_a * hsa595 :
+(hsa595' = hsa595-1) & (hsa595_a' = hsa595_a + 1);
+
+ []
+( hsa3265_a > 0) & ( action < Max_action )
+-> (1) * hsa3265_a :
+(hsa3265_a' = hsa3265_a - 1) & ( action' = action + 1);
+
+ []
+( hsa673_a > 0) & ( action < Max_action )
+-> (1) * hsa673_a :
+(hsa673_a' = hsa673_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5594_a > 0) & ( action < Max_action )
+-> (1) * hsa5594_a :
+(hsa5594_a' = hsa5594_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5604_a > 0) & ( action < Max_action )
+-> (1) * hsa5604_a :
+(hsa5604_a' = hsa5604_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6256_a > 0) & ( action < Max_action )
+-> (1) * hsa6256_a :
+(hsa6256_a' = hsa6256_a - 1) & ( action' = action + 1);
+
+ []
+( hsa4609_a > 0) & ( action < Max_action )
+-> (1) * hsa4609_a :
+(hsa4609_a' = hsa4609_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5595_a > 0) & ( action < Max_action )
+-> (1) * hsa5595_a :
+(hsa5595_a' = hsa5595_a - 1) & ( action' = action + 1);
+
+ []
+( hsa595_a > 0) & ( action < Max_action )
+-> (1) * hsa595_a :
+(hsa595_a' = hsa595_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5605_a > 0) & ( action < Max_action )
+-> (1) * hsa5605_a :
+(hsa5605_a' = hsa5605_a - 1) & ( action' = action + 1);
+
+ []
+( hsa3845_a > 0) & ( action < Max_action )
+-> (1) * hsa3845_a :
+(hsa3845_a' = hsa3845_a - 1) & ( action' = action + 1);
+
+ []
+( hsa51176_a > 0) & ( action < Max_action )
+-> (1) * hsa51176_a :
+(hsa51176_a' = hsa51176_a - 1) & ( action' = action + 1);
+
+endmodule
+
+rewards
+true:action;
+endrewards

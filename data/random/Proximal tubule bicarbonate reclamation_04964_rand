@@ -1,0 +1,37 @@
+ctmc
+
+const int Max = 1;
+const int Max_action = 20;
+
+module hsa04964 
+hsa6550  : [0..Max] init 0;
+hsa6550_a  : [0..Max] init 0;
+hsa8671  : [0..Max] init 0;
+hsa8671_a  : [0..Max] init 0;
+hsa762  : [0..Max] init 0;
+hsa762_a  : [0..Max] init 0;
+hsa760  : [0..Max] init 0;
+hsa760_a  : [0..Max] init 0;
+hsa27165  : [0..Max] init 0;
+hsa27165_a  : [0..Max] init 0;
+hsa2746  : [0..Max] init 0;
+hsa2746_a  : [0..Max] init 0;
+hsa23439  : [0..Max] init 0;
+hsa23439_a  : [0..Max] init 0;
+hsa358  : [0..Max] init 0;
+hsa358_a  : [0..Max] init 0;
+hsa10991  : [0..Max] init 0;
+hsa10991_a  : [0..Max] init 0;
+hsa1468  : [0..Max] init 0;
+hsa1468_a  : [0..Max] init 0;
+hsa4190  : [0..Max] init 0;
+hsa4190_a  : [0..Max] init 0;
+hsa5105  : [0..Max] init 0;
+hsa5105_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+endmodule
+rewards
+true:action;
+endrewards

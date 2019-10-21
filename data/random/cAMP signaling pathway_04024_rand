@@ -1,0 +1,802 @@
+ctmc
+
+const int Max = 1;
+const int Max_action = 20;
+
+module hsa04024 
+hsa775  : [0..Max] init 0;
+hsa775_a  : [0..Max] init 0;
+hsa6262  : [0..Max] init 0;
+hsa6262_a  : [0..Max] init 0;
+hsa488  : [0..Max] init 0;
+hsa488_a  : [0..Max] init 0;
+hsa7137  : [0..Max] init 0;
+hsa7137_a  : [0..Max] init 0;
+hsa23439  : [0..Max] init 1;
+hsa23439_a  : [0..Max] init 0;
+hsa6548  : [0..Max] init 0;
+hsa6548_a  : [0..Max] init 0;
+hsa1128  : [0..Max] init 1;
+hsa1128_a  : [0..Max] init 0;
+hsa2770  : [0..Max] init 0;
+hsa2770_a  : [0..Max] init 0;
+hsa2778  : [0..Max] init 1;
+hsa2778_a  : [0..Max] init 0;
+hsa107  : [0..Max] init 0;
+hsa107_a  : [0..Max] init 0;
+hsa5566  : [0..Max] init 0;
+hsa5566_a  : [0..Max] init 0;
+hsa23533  : [0..Max] init 0;
+hsa23533_a  : [0..Max] init 0;
+hsa10000  : [0..Max] init 0;
+hsa10000_a  : [0..Max] init 0;
+hsa5594  : [0..Max] init 0;
+hsa5594_a  : [0..Max] init 0;
+hsa5350  : [0..Max] init 0;
+hsa5350_a  : [0..Max] init 0;
+hsa1080  : [0..Max] init 0;
+hsa1080_a  : [0..Max] init 0;
+hsa163688  : [0..Max] init 1;
+hsa163688_a  : [0..Max] init 0;
+hsa10411  : [0..Max] init 0;
+hsa10411_a  : [0..Max] init 0;
+hsa490  : [0..Max] init 0;
+hsa490_a  : [0..Max] init 0;
+hsa5906  : [0..Max] init 0;
+hsa5906_a  : [0..Max] init 0;
+hsa5894  : [0..Max] init 0;
+hsa5894_a  : [0..Max] init 0;
+hsa5604  : [0..Max] init 0;
+hsa5604_a  : [0..Max] init 0;
+hsa64411  : [0..Max] init 0;
+hsa64411_a  : [0..Max] init 0;
+hsa673  : [0..Max] init 0;
+hsa673_a  : [0..Max] init 0;
+hsa51196  : [0..Max] init 0;
+hsa51196_a  : [0..Max] init 0;
+hsa5599  : [0..Max] init 1;
+hsa5599_a  : [0..Max] init 0;
+hsa10488  : [0..Max] init 0;
+hsa10488_a  : [0..Max] init 0;
+hsa1258  : [0..Max] init 0;
+hsa1258_a  : [0..Max] init 0;
+hsa387  : [0..Max] init 0;
+hsa387_a  : [0..Max] init 0;
+hsa6093  : [0..Max] init 0;
+hsa6093_a  : [0..Max] init 0;
+hsa4659  : [0..Max] init 1;
+hsa4659_a  : [0..Max] init 0;
+hsa814  : [0..Max] init 0;
+hsa814_a  : [0..Max] init 0;
+hsa117  : [0..Max] init 0;
+hsa117_a  : [0..Max] init 0;
+hsa4301  : [0..Max] init 0;
+hsa4301_a  : [0..Max] init 0;
+hsa5139  : [0..Max] init 0;
+hsa5139_a  : [0..Max] init 0;
+hsa572  : [0..Max] init 1;
+hsa572_a  : [0..Max] init 0;
+hsa2737  : [0..Max] init 0;
+hsa2737_a  : [0..Max] init 0;
+hsa4790  : [0..Max] init 0;
+hsa4790_a  : [0..Max] init 0;
+hsa5465  : [0..Max] init 1;
+hsa5465_a  : [0..Max] init 0;
+hsa4772  : [0..Max] init 0;
+hsa4772_a  : [0..Max] init 0;
+hsa1387  : [0..Max] init 1;
+hsa1387_a  : [0..Max] init 0;
+hsa6662  : [0..Max] init 0;
+hsa6662_a  : [0..Max] init 0;
+hsa10257  : [0..Max] init 1;
+hsa10257_a  : [0..Max] init 0;
+hsa55811  : [0..Max] init 0;
+hsa55811_a  : [0..Max] init 0;
+hsa22800  : [0..Max] init 0;
+hsa22800_a  : [0..Max] init 0;
+hsa5337  : [0..Max] init 0;
+hsa5337_a  : [0..Max] init 0;
+hsa3991  : [0..Max] init 0;
+hsa3991_a  : [0..Max] init 0;
+hsa4852  : [0..Max] init 0;
+hsa4852_a  : [0..Max] init 0;
+hsa51738  : [0..Max] init 1;
+hsa51738_a  : [0..Max] init 0;
+hsa2890  : [0..Max] init 0;
+hsa2890_a  : [0..Max] init 0;
+hsa116443  : [0..Max] init 1;
+hsa116443_a  : [0..Max] init 0;
+hsa84876  : [0..Max] init 1;
+hsa84876_a  : [0..Max] init 0;
+hsa5348  : [0..Max] init 0;
+hsa5348_a  : [0..Max] init 0;
+hsa10021  : [0..Max] init 0;
+hsa10021_a  : [0..Max] init 0;
+hsa84152  : [0..Max] init 1;
+hsa84152_a  : [0..Max] init 0;
+hsa5499  : [0..Max] init 0;
+hsa5499_a  : [0..Max] init 0;
+hsa4792  : [0..Max] init 0;
+hsa4792_a  : [0..Max] init 0;
+hsa268  : [0..Max] init 0;
+hsa268_a  : [0..Max] init 0;
+hsa627  : [0..Max] init 1;
+hsa627_a  : [0..Max] init 0;
+hsa2353  : [0..Max] init 0;
+hsa2353_a  : [0..Max] init 0;
+hsa3725  : [0..Max] init 0;
+hsa3725_a  : [0..Max] init 0;
+hsa2735  : [0..Max] init 0;
+hsa2735_a  : [0..Max] init 0;
+hsa5727  : [0..Max] init 1;
+hsa5727_a  : [0..Max] init 0;
+hsa64399  : [0..Max] init 0;
+hsa64399_a  : [0..Max] init 0;
+hsa2149  : [0..Max] init 0;
+hsa2149_a  : [0..Max] init 0;
+hsa51  : [0..Max] init 1;
+hsa51_a  : [0..Max] init 0;
+hsa10398  : [0..Max] init 0;
+hsa10398_a  : [0..Max] init 0;
+hsa7074  : [0..Max] init 0;
+hsa7074_a  : [0..Max] init 0;
+hsa10451  : [0..Max] init 0;
+hsa10451_a  : [0..Max] init 0;
+hsa5879  : [0..Max] init 0;
+hsa5879_a  : [0..Max] init 0;
+hsa5058  : [0..Max] init 1;
+hsa5058_a  : [0..Max] init 0;
+hsa2488  : [0..Max] init 0;
+hsa2488_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+ []
+( hsa1128_a > 0 ) & ( hsa2770 > 0 ) & ( hsa2770_a < Max )
+-> (1) * hsa1128_a * hsa2770 :
+(hsa2770' = hsa2770-1) & (hsa2770_a' = hsa2770_a + 1);
+
+ []
+( hsa2778_a > 0 ) & ( hsa107 > 0 ) & ( hsa107_a < Max )
+-> (1) * hsa2778_a * hsa107 :
+(hsa107' = hsa107-1) & (hsa107_a' = hsa107_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa775 > 0 ) & ( hsa775_a < Max )
+-> (1) * hsa5566_a * hsa775 :
+(hsa775' = hsa775-1) & (hsa775_a' = hsa775_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa6262 > 0 ) & ( hsa6262_a < Max )
+-> (1) * hsa5566_a * hsa6262 :
+(hsa6262' = hsa6262-1) & (hsa6262_a' = hsa6262_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa6548 > 0 ) & ( hsa6548_a < Max )
+-> (1) * hsa5566_a * hsa6548 :
+(hsa6548' = hsa6548-1) & (hsa6548_a' = hsa6548_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa5350 > 0 ) & ( hsa5350_a < Max )
+-> (1) * hsa5566_a * hsa5350 :
+(hsa5350' = hsa5350-1) & (hsa5350_a' = hsa5350_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa1080 > 0 ) & ( hsa1080_a < Max )
+-> (1) * hsa5566_a * hsa1080 :
+(hsa1080' = hsa1080-1) & (hsa1080_a' = hsa1080_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa490 > 0 ) & ( hsa490_a < Max )
+-> (1) * hsa5566_a * hsa490 :
+(hsa490' = hsa490-1) & (hsa490_a' = hsa490_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa5139 > 0 ) & ( hsa5139_a < Max )
+-> (1) * hsa5566_a * hsa5139 :
+(hsa5139' = hsa5139-1) & (hsa5139_a' = hsa5139_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa5465 > 0 ) & ( hsa5465_a < Max )
+-> (1) * hsa5566_a * hsa5465 :
+(hsa5465' = hsa5465-1) & (hsa5465_a' = hsa5465_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa6662 > 0 ) & ( hsa6662_a < Max )
+-> (1) * hsa5566_a * hsa6662 :
+(hsa6662' = hsa6662-1) & (hsa6662_a' = hsa6662_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa2890 > 0 ) & ( hsa2890_a < Max )
+-> (1) * hsa5566_a * hsa2890 :
+(hsa2890' = hsa2890-1) & (hsa2890_a' = hsa2890_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa116443 > 0 ) & ( hsa116443_a < Max )
+-> (1) * hsa5566_a * hsa116443 :
+(hsa116443' = hsa116443-1) & (hsa116443_a' = hsa116443_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa84876 > 0 ) & ( hsa84876_a < Max )
+-> (1) * hsa5566_a * hsa84876 :
+(hsa84876' = hsa84876-1) & (hsa84876_a' = hsa84876_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa5348 > 0 ) & ( hsa5348_a < Max )
+-> (1) * hsa5566_a * hsa5348 :
+(hsa5348' = hsa5348-1) & (hsa5348_a' = hsa5348_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa5566_a > 0 ) & ( hsa84152 > 0 ) & ( hsa84152_a < Max )
+-> (1) * hsa5566_a * hsa84152 :
+(hsa84152' = hsa84152-1) & (hsa84152_a' = hsa84152_a + 1);
+
+ []
+( hsa5566 > 0 ) & ( hsa5566_a < Max )
+-> (1) *hsa5566 :
+(hsa5566' = hsa5566-1) & (hsa5566_a' = hsa5566_a + 1);
+
+ []
+( hsa23533_a > 0 ) & ( hsa10000 > 0 ) & ( hsa10000_a < Max )
+-> (1) * hsa23533_a * hsa10000 :
+(hsa10000' = hsa10000-1) & (hsa10000_a' = hsa10000_a + 1);
+
+ []
+( hsa5594_a > 0 ) & ( hsa10488 > 0 ) & ( hsa10488_a < Max )
+-> (1) * hsa5594_a * hsa10488 :
+(hsa10488' = hsa10488-1) & (hsa10488_a' = hsa10488_a + 1);
+
+ []
+( hsa163688_a > 0 ) & ( hsa107 > 0 ) & ( hsa107_a < Max )
+-> (1) * hsa163688_a * hsa107 :
+(hsa107' = hsa107-1) & (hsa107_a' = hsa107_a + 1);
+
+ []
+( hsa163688 > 0 ) & ( hsa163688_a < Max )
+-> (1) *hsa163688 :
+(hsa163688' = hsa163688-1) & (hsa163688_a' = hsa163688_a + 1);
+
+ []
+( hsa10411_a > 0 ) & ( hsa5906 > 0 ) & ( hsa5906_a < Max )
+-> (1) * hsa10411_a * hsa5906 :
+(hsa5906' = hsa5906-1) & (hsa5906_a' = hsa5906_a + 1);
+
+ []
+( hsa10411 > 0 ) & ( hsa10411_a < Max )
+-> (1) *hsa10411 :
+(hsa10411' = hsa10411-1) & (hsa10411_a' = hsa10411_a + 1);
+
+ []
+( hsa10411_a > 0 ) & ( hsa5599 > 0 ) & ( hsa5599_a < Max )
+-> (1) * hsa10411_a * hsa5599 :
+(hsa5599' = hsa5599-1) & (hsa5599_a' = hsa5599_a + 1);
+
+ []
+( hsa10411 > 0 ) & ( hsa10411_a < Max )
+-> (1) *hsa10411 :
+(hsa10411' = hsa10411-1) & (hsa10411_a' = hsa10411_a + 1);
+
+ []
+( hsa10411_a > 0 ) & ( hsa22800 > 0 ) & ( hsa22800_a < Max )
+-> (1) * hsa10411_a * hsa22800 :
+(hsa22800' = hsa22800-1) & (hsa22800_a' = hsa22800_a + 1);
+
+ []
+( hsa10411 > 0 ) & ( hsa10411_a < Max )
+-> (1) *hsa10411 :
+(hsa10411' = hsa10411-1) & (hsa10411_a' = hsa10411_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa23533 > 0 ) & ( hsa23533_a < Max )
+-> (1) * hsa5906_a * hsa23533 :
+(hsa23533' = hsa23533-1) & (hsa23533_a' = hsa23533_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa5894 > 0 ) & ( hsa5894_a < Max )
+-> (1) * hsa5906_a * hsa5894 :
+(hsa5894' = hsa5894-1) & (hsa5894_a' = hsa5894_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa64411 > 0 ) & ( hsa64411_a < Max )
+-> (1) * hsa5906_a * hsa64411 :
+(hsa64411' = hsa64411-1) & (hsa64411_a' = hsa64411_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa673 > 0 ) & ( hsa673_a < Max )
+-> (1) * hsa5906_a * hsa673 :
+(hsa673' = hsa673-1) & (hsa673_a' = hsa673_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa51196 > 0 ) & ( hsa51196_a < Max )
+-> (1) * hsa5906_a * hsa51196 :
+(hsa51196' = hsa51196-1) & (hsa51196_a' = hsa51196_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa4301 > 0 ) & ( hsa4301_a < Max )
+-> (1) * hsa5906_a * hsa4301 :
+(hsa4301' = hsa4301-1) & (hsa4301_a' = hsa4301_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa7074 > 0 ) & ( hsa7074_a < Max )
+-> (1) * hsa5906_a * hsa7074 :
+(hsa7074' = hsa7074-1) & (hsa7074_a' = hsa7074_a + 1);
+
+ []
+( hsa5906_a > 0 ) & ( hsa10451 > 0 ) & ( hsa10451_a < Max )
+-> (1) * hsa5906_a * hsa10451 :
+(hsa10451' = hsa10451-1) & (hsa10451_a' = hsa10451_a + 1);
+
+ []
+( hsa5894_a > 0 ) & ( hsa5604 > 0 ) & ( hsa5604_a < Max )
+-> (1) * hsa5894_a * hsa5604 :
+(hsa5604' = hsa5604-1) & (hsa5604_a' = hsa5604_a + 1);
+
+ []
+( hsa5604_a > 0 ) & ( hsa5594 > 0 ) & ( hsa5594_a < Max )
+-> (1) * hsa5604_a * hsa5594 :
+(hsa5594' = hsa5594-1) & (hsa5594_a' = hsa5594_a + 1);
+
+ []
+( hsa673_a > 0 ) & ( hsa5604 > 0 ) & ( hsa5604_a < Max )
+-> (1) * hsa673_a * hsa5604 :
+(hsa5604' = hsa5604-1) & (hsa5604_a' = hsa5604_a + 1);
+
+ []
+( hsa10488_a > 0 ) & ( hsa627 > 0 ) & ( hsa627_a < Max )
+-> (1) * hsa10488_a * hsa627 :
+(hsa627' = hsa627-1) & (hsa627_a' = hsa627_a + 1);
+
+ []
+( hsa10488_a > 0 ) & ( hsa2353 > 0 ) & ( hsa2353_a < Max )
+-> (1) * hsa10488_a * hsa2353 :
+(hsa2353' = hsa2353-1) & (hsa2353_a' = hsa2353_a + 1);
+
+ []
+( hsa10488_a > 0 ) & ( hsa3725 > 0 ) & ( hsa3725_a < Max )
+-> (1) * hsa10488_a * hsa3725 :
+(hsa3725' = hsa3725-1) & (hsa3725_a' = hsa3725_a + 1);
+
+ []
+( hsa387_a > 0 ) & ( hsa6093 > 0 ) & ( hsa6093_a < Max )
+-> (1) * hsa387_a * hsa6093 :
+(hsa6093' = hsa6093-1) & (hsa6093_a' = hsa6093_a + 1);
+
+ []
+( hsa387 > 0 ) & ( hsa387_a < Max )
+-> (1) *hsa387 :
+(hsa387' = hsa387-1) & (hsa387_a' = hsa387_a + 1);
+
+ []
+( hsa117_a > 0 ) & ( hsa2778 > 0 ) & ( hsa2778_a < Max )
+-> (1) * hsa117_a * hsa2778 :
+(hsa2778' = hsa2778-1) & (hsa2778_a' = hsa2778_a + 1);
+
+ []
+( hsa2737_a > 0 ) & ( hsa2735 > 0 ) & ( hsa2735_a < Max )
+-> (1) * hsa2737_a * hsa2735 :
+(hsa2735' = hsa2735-1) & (hsa2735_a' = hsa2735_a + 1);
+
+ []
+( hsa2737 > 0 ) & ( hsa2737_a < Max )
+-> (1) *hsa2737 :
+(hsa2737' = hsa2737-1) & (hsa2737_a' = hsa2737_a + 1);
+
+ []
+( hsa2737_a > 0 ) & ( hsa5727 > 0 ) & ( hsa5727_a < Max )
+-> (1) * hsa2737_a * hsa5727 :
+(hsa5727' = hsa5727-1) & (hsa5727_a' = hsa5727_a + 1);
+
+ []
+( hsa2737 > 0 ) & ( hsa2737_a < Max )
+-> (1) *hsa2737 :
+(hsa2737' = hsa2737-1) & (hsa2737_a' = hsa2737_a + 1);
+
+ []
+( hsa2737_a > 0 ) & ( hsa64399 > 0 ) & ( hsa64399_a < Max )
+-> (1) * hsa2737_a * hsa64399 :
+(hsa64399' = hsa64399-1) & (hsa64399_a' = hsa64399_a + 1);
+
+ []
+( hsa2737 > 0 ) & ( hsa2737_a < Max )
+-> (1) *hsa2737 :
+(hsa2737' = hsa2737-1) & (hsa2737_a' = hsa2737_a + 1);
+
+ []
+( hsa4790_a > 0 ) & ( hsa268 > 0 ) & ( hsa268_a < Max )
+-> (1) * hsa4790_a * hsa268 :
+(hsa268' = hsa268-1) & (hsa268_a' = hsa268_a + 1);
+
+ []
+( hsa4790 > 0 ) & ( hsa4790_a < Max )
+-> (1) *hsa4790 :
+(hsa4790' = hsa4790-1) & (hsa4790_a' = hsa4790_a + 1);
+
+ []
+( hsa5465_a > 0 ) & ( hsa51 > 0 ) & ( hsa51_a < Max )
+-> (1) * hsa5465_a * hsa51 :
+(hsa51' = hsa51-1) & (hsa51_a' = hsa51_a + 1);
+
+ []
+( hsa4772_a > 0 ) & ( hsa2149 > 0 ) & ( hsa2149_a < Max )
+-> (1) * hsa4772_a * hsa2149 :
+(hsa2149' = hsa2149-1) & (hsa2149_a' = hsa2149_a + 1);
+
+ []
+( hsa4772 > 0 ) & ( hsa4772_a < Max )
+-> (1) *hsa4772 :
+(hsa4772' = hsa4772-1) & (hsa4772_a' = hsa4772_a + 1);
+
+ []
+( hsa6662_a > 0 ) & ( hsa268 > 0 ) & ( hsa268_a < Max )
+-> (1) * hsa6662_a * hsa268 :
+(hsa268' = hsa268-1) & (hsa268_a' = hsa268_a + 1);
+
+ []
+( hsa22800_a > 0 ) & ( hsa51196 > 0 ) & ( hsa51196_a < Max )
+-> (1) * hsa22800_a * hsa51196 :
+(hsa51196' = hsa51196-1) & (hsa51196_a' = hsa51196_a + 1);
+
+ []
+( hsa22800_a > 0 ) & ( hsa5337 > 0 ) & ( hsa5337_a < Max )
+-> (1) * hsa22800_a * hsa5337 :
+(hsa5337' = hsa5337-1) & (hsa5337_a' = hsa5337_a + 1);
+
+ []
+( hsa4852_a > 0 ) & ( hsa1128 > 0 ) & ( hsa1128_a < Max )
+-> (1) * hsa4852_a * hsa1128 :
+(hsa1128' = hsa1128-1) & (hsa1128_a' = hsa1128_a + 1);
+
+ []
+( hsa4852 > 0 ) & ( hsa4852_a < Max )
+-> (1) *hsa4852 :
+(hsa4852' = hsa4852-1) & (hsa4852_a' = hsa4852_a + 1);
+
+ []
+( hsa51738_a > 0 ) & ( hsa1128 > 0 ) & ( hsa1128_a < Max )
+-> (1) * hsa51738_a * hsa1128 :
+(hsa1128' = hsa1128-1) & (hsa1128_a' = hsa1128_a + 1);
+
+ []
+( hsa51738 > 0 ) & ( hsa51738_a < Max )
+-> (1) *hsa51738 :
+(hsa51738' = hsa51738-1) & (hsa51738_a' = hsa51738_a + 1);
+
+ []
+( hsa5348_a > 0 ) & ( hsa23439 > 0 ) & ( hsa23439_a < Max )
+-> (1) * hsa5348_a * hsa23439 :
+(hsa23439' = hsa23439-1) & (hsa23439_a' = hsa23439_a + 1);
+
+ []
+( hsa7074_a > 0 ) & ( hsa5879 > 0 ) & ( hsa5879_a < Max )
+-> (1) * hsa7074_a * hsa5879 :
+(hsa5879' = hsa5879-1) & (hsa5879_a' = hsa5879_a + 1);
+
+ []
+( hsa10451_a > 0 ) & ( hsa5879 > 0 ) & ( hsa5879_a < Max )
+-> (1) * hsa10451_a * hsa5879 :
+(hsa5879' = hsa5879-1) & (hsa5879_a' = hsa5879_a + 1);
+
+ []
+( hsa5879_a > 0 ) & ( hsa5058 > 0 ) & ( hsa5058_a < Max )
+-> (1) * hsa5879_a * hsa5058 :
+(hsa5058' = hsa5058-1) & (hsa5058_a' = hsa5058_a + 1);
+
+ []
+( hsa2488_a > 0 ) & ( hsa117 > 0 ) & ( hsa117_a < Max )
+-> (1) * hsa2488_a * hsa117 :
+(hsa117' = hsa117-1) & (hsa117_a' = hsa117_a + 1);
+
+ []
+( hsa2488 > 0 ) & ( hsa2488_a < Max )
+-> (1) *hsa2488 :
+(hsa2488' = hsa2488-1) & (hsa2488_a' = hsa2488_a + 1);
+
+ []
+( hsa775_a > 0) & ( action < Max_action )
+-> (1) * hsa775_a :
+(hsa775_a' = hsa775_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6262_a > 0) & ( action < Max_action )
+-> (1) * hsa6262_a :
+(hsa6262_a' = hsa6262_a - 1) & ( action' = action + 1);
+
+ []
+( hsa23439_a > 0) & ( action < Max_action )
+-> (1) * hsa23439_a :
+(hsa23439_a' = hsa23439_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6548_a > 0) & ( action < Max_action )
+-> (1) * hsa6548_a :
+(hsa6548_a' = hsa6548_a - 1) & ( action' = action + 1);
+
+ []
+( hsa1128_a > 0) & ( action < Max_action )
+-> (1) * hsa1128_a :
+(hsa1128_a' = hsa1128_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2770_a > 0) & ( action < Max_action )
+-> (1) * hsa2770_a :
+(hsa2770_a' = hsa2770_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2778_a > 0) & ( action < Max_action )
+-> (1) * hsa2778_a :
+(hsa2778_a' = hsa2778_a - 1) & ( action' = action + 1);
+
+ []
+( hsa107_a > 0) & ( action < Max_action )
+-> (1) * hsa107_a :
+(hsa107_a' = hsa107_a - 1) & ( action' = action + 1);
+
+ []
+( hsa23533_a > 0) & ( action < Max_action )
+-> (1) * hsa23533_a :
+(hsa23533_a' = hsa23533_a - 1) & ( action' = action + 1);
+
+ []
+( hsa10000_a > 0) & ( action < Max_action )
+-> (1) * hsa10000_a :
+(hsa10000_a' = hsa10000_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5594_a > 0) & ( action < Max_action )
+-> (1) * hsa5594_a :
+(hsa5594_a' = hsa5594_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5350_a > 0) & ( action < Max_action )
+-> (1) * hsa5350_a :
+(hsa5350_a' = hsa5350_a - 1) & ( action' = action + 1);
+
+ []
+( hsa1080_a > 0) & ( action < Max_action )
+-> (1) * hsa1080_a :
+(hsa1080_a' = hsa1080_a - 1) & ( action' = action + 1);
+
+ []
+( hsa490_a > 0) & ( action < Max_action )
+-> (1) * hsa490_a :
+(hsa490_a' = hsa490_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5906_a > 0) & ( action < Max_action )
+-> (1) * hsa5906_a :
+(hsa5906_a' = hsa5906_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5894_a > 0) & ( action < Max_action )
+-> (1) * hsa5894_a :
+(hsa5894_a' = hsa5894_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5604_a > 0) & ( action < Max_action )
+-> (1) * hsa5604_a :
+(hsa5604_a' = hsa5604_a - 1) & ( action' = action + 1);
+
+ []
+( hsa64411_a > 0) & ( action < Max_action )
+-> (1) * hsa64411_a :
+(hsa64411_a' = hsa64411_a - 1) & ( action' = action + 1);
+
+ []
+( hsa673_a > 0) & ( action < Max_action )
+-> (1) * hsa673_a :
+(hsa673_a' = hsa673_a - 1) & ( action' = action + 1);
+
+ []
+( hsa51196_a > 0) & ( action < Max_action )
+-> (1) * hsa51196_a :
+(hsa51196_a' = hsa51196_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5599_a > 0) & ( action < Max_action )
+-> (1) * hsa5599_a :
+(hsa5599_a' = hsa5599_a - 1) & ( action' = action + 1);
+
+ []
+( hsa10488_a > 0) & ( action < Max_action )
+-> (1) * hsa10488_a :
+(hsa10488_a' = hsa10488_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6093_a > 0) & ( action < Max_action )
+-> (1) * hsa6093_a :
+(hsa6093_a' = hsa6093_a - 1) & ( action' = action + 1);
+
+ []
+( hsa117_a > 0) & ( action < Max_action )
+-> (1) * hsa117_a :
+(hsa117_a' = hsa117_a - 1) & ( action' = action + 1);
+
+ []
+( hsa4301_a > 0) & ( action < Max_action )
+-> (1) * hsa4301_a :
+(hsa4301_a' = hsa4301_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5139_a > 0) & ( action < Max_action )
+-> (1) * hsa5139_a :
+(hsa5139_a' = hsa5139_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5465_a > 0) & ( action < Max_action )
+-> (1) * hsa5465_a :
+(hsa5465_a' = hsa5465_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6662_a > 0) & ( action < Max_action )
+-> (1) * hsa6662_a :
+(hsa6662_a' = hsa6662_a - 1) & ( action' = action + 1);
+
+ []
+( hsa22800_a > 0) & ( action < Max_action )
+-> (1) * hsa22800_a :
+(hsa22800_a' = hsa22800_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5337_a > 0) & ( action < Max_action )
+-> (1) * hsa5337_a :
+(hsa5337_a' = hsa5337_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2890_a > 0) & ( action < Max_action )
+-> (1) * hsa2890_a :
+(hsa2890_a' = hsa2890_a - 1) & ( action' = action + 1);
+
+ []
+( hsa116443_a > 0) & ( action < Max_action )
+-> (1) * hsa116443_a :
+(hsa116443_a' = hsa116443_a - 1) & ( action' = action + 1);
+
+ []
+( hsa84876_a > 0) & ( action < Max_action )
+-> (1) * hsa84876_a :
+(hsa84876_a' = hsa84876_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5348_a > 0) & ( action < Max_action )
+-> (1) * hsa5348_a :
+(hsa5348_a' = hsa5348_a - 1) & ( action' = action + 1);
+
+ []
+( hsa84152_a > 0) & ( action < Max_action )
+-> (1) * hsa84152_a :
+(hsa84152_a' = hsa84152_a - 1) & ( action' = action + 1);
+
+ []
+( hsa268_a > 0) & ( action < Max_action )
+-> (1) * hsa268_a :
+(hsa268_a' = hsa268_a - 1) & ( action' = action + 1);
+
+ []
+( hsa627_a > 0) & ( action < Max_action )
+-> (1) * hsa627_a :
+(hsa627_a' = hsa627_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2353_a > 0) & ( action < Max_action )
+-> (1) * hsa2353_a :
+(hsa2353_a' = hsa2353_a - 1) & ( action' = action + 1);
+
+ []
+( hsa3725_a > 0) & ( action < Max_action )
+-> (1) * hsa3725_a :
+(hsa3725_a' = hsa3725_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2735_a > 0) & ( action < Max_action )
+-> (1) * hsa2735_a :
+(hsa2735_a' = hsa2735_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5727_a > 0) & ( action < Max_action )
+-> (1) * hsa5727_a :
+(hsa5727_a' = hsa5727_a - 1) & ( action' = action + 1);
+
+ []
+( hsa64399_a > 0) & ( action < Max_action )
+-> (1) * hsa64399_a :
+(hsa64399_a' = hsa64399_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2149_a > 0) & ( action < Max_action )
+-> (1) * hsa2149_a :
+(hsa2149_a' = hsa2149_a - 1) & ( action' = action + 1);
+
+ []
+( hsa51_a > 0) & ( action < Max_action )
+-> (1) * hsa51_a :
+(hsa51_a' = hsa51_a - 1) & ( action' = action + 1);
+
+ []
+( hsa7074_a > 0) & ( action < Max_action )
+-> (1) * hsa7074_a :
+(hsa7074_a' = hsa7074_a - 1) & ( action' = action + 1);
+
+ []
+( hsa10451_a > 0) & ( action < Max_action )
+-> (1) * hsa10451_a :
+(hsa10451_a' = hsa10451_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5879_a > 0) & ( action < Max_action )
+-> (1) * hsa5879_a :
+(hsa5879_a' = hsa5879_a - 1) & ( action' = action + 1);
+
+ []
+( hsa5058_a > 0) & ( action < Max_action )
+-> (1) * hsa5058_a :
+(hsa5058_a' = hsa5058_a - 1) & ( action' = action + 1);
+
+endmodule
+rewards
+true:action;
+endrewards

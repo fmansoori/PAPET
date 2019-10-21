@@ -1,0 +1,156 @@
+ctmc
+
+const int Max =  5 ;
+const int Max_action = 20;
+
+module hsa04721 
+hsa773  : [0..Max] init  1 ;
+hsa773_a  : [0..Max] init 0;
+hsa112755  : [0..Max] init  1 ;
+hsa112755_a  : [0..Max] init 0;
+hsa2054  : [0..Max] init  1 ;
+hsa2054_a  : [0..Max] init 0;
+hsa22999  : [0..Max] init 0;
+hsa22999_a  : [0..Max] init 0;
+hsa10814  : [0..Max] init  1 ;
+hsa10814_a  : [0..Max] init 0;
+hsa5864  : [0..Max] init 0;
+hsa5864_a  : [0..Max] init 0;
+hsa6844  : [0..Max] init  1 ;
+hsa6844_a  : [0..Max] init 0;
+hsa6616  : [0..Max] init 0;
+hsa6616_a  : [0..Max] init 0;
+hsa8775  : [0..Max] init 0;
+hsa8775_a  : [0..Max] init 0;
+hsa4905  : [0..Max] init 0;
+hsa4905_a  : [0..Max] init 0;
+hsa6857  : [0..Max] init 0;
+hsa6857_a  : [0..Max] init 0;
+hsa1211  : [0..Max] init  1 ;
+hsa1211_a  : [0..Max] init 0;
+hsa1173  : [0..Max] init 0;
+hsa1173_a  : [0..Max] init 0;
+hsa1759  : [0..Max] init  1 ;
+hsa1759_a  : [0..Max] init 0;
+hsa1785  : [0..Max] init  1 ;
+hsa1785_a  : [0..Max] init 0;
+hsa6812  : [0..Max] init 0;
+hsa6812_a  : [0..Max] init 0;
+hsa10497  : [0..Max] init  1 ;
+hsa10497_a  : [0..Max] init 0;
+hsa140679  : [0..Max] init  1 ;
+hsa140679_a  : [0..Max] init 0;
+hsa246213  : [0..Max] init  1 ;
+hsa246213_a  : [0..Max] init 0;
+hsa10312  : [0..Max] init  1 ;
+hsa10312_a  : [0..Max] init 0;
+hsa127124  : [0..Max] init  1 ;
+hsa127124_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+ []
+( hsa112755_a > 0 ) & ( hsa6844 > 0 ) & ( hsa6844_a < Max )
+-> (1) * hsa112755_a * hsa6844 :
+(hsa6844' = hsa6844-1) & (hsa6844_a' = hsa6844_a + 1);
+
+ []
+( hsa112755_a > 0 ) & ( hsa6616 > 0 ) & ( hsa6616_a < Max )
+-> (1) * hsa112755_a * hsa6616 :
+(hsa6616' = hsa6616-1) & (hsa6616_a' = hsa6616_a + 1);
+
+ []
+( hsa5864_a > 0 ) & ( hsa22999 > 0 ) & ( hsa22999_a < Max )
+-> (1) * hsa5864_a * hsa22999 :
+(hsa22999' = hsa22999-1) & (hsa22999_a' = hsa22999_a + 1);
+
+ []
+( hsa5864 > 0 ) & ( hsa5864_a < Max )
+-> (1) *hsa5864 :
+(hsa5864' = hsa5864-1) & (hsa5864_a' = hsa5864_a + 1);
+
+ []
+( hsa6844_a > 0 ) & ( hsa112755 > 0 ) & ( hsa112755_a < Max )
+-> (1) * hsa6844_a * hsa112755 :
+(hsa112755' = hsa112755-1) & (hsa112755_a' = hsa112755_a + 1);
+
+ []
+( hsa6844_a > 0 ) & ( hsa2054 > 0 ) & ( hsa2054_a < Max )
+-> (1) * hsa6844_a * hsa2054 :
+(hsa2054' = hsa2054-1) & (hsa2054_a' = hsa2054_a + 1);
+
+ []
+( hsa1211_a > 0 ) & ( hsa1173 > 0 ) & ( hsa1173_a < Max )
+-> (1) * hsa1211_a * hsa1173 :
+(hsa1173' = hsa1173-1) & (hsa1173_a' = hsa1173_a + 1);
+
+ []
+( hsa1211 > 0 ) & ( hsa1211_a < Max )
+-> (1) *hsa1211 :
+(hsa1211' = hsa1211-1) & (hsa1211_a' = hsa1211_a + 1);
+
+ []
+( hsa6812_a > 0 ) & ( hsa112755 > 0 ) & ( hsa112755_a < Max )
+-> (1) * hsa6812_a * hsa112755 :
+(hsa112755' = hsa112755-1) & (hsa112755_a' = hsa112755_a + 1);
+
+ []
+( hsa6812 > 0 ) & ( hsa6812_a < Max )
+-> (1) *hsa6812 :
+(hsa6812' = hsa6812-1) & (hsa6812_a' = hsa6812_a + 1);
+
+ []
+( hsa6812_a > 0 ) & ( hsa2054 > 0 ) & ( hsa2054_a < Max )
+-> (1) * hsa6812_a * hsa2054 :
+(hsa2054' = hsa2054-1) & (hsa2054_a' = hsa2054_a + 1);
+
+ []
+( hsa6812 > 0 ) & ( hsa6812_a < Max )
+-> (1) *hsa6812 :
+(hsa6812' = hsa6812-1) & (hsa6812_a' = hsa6812_a + 1);
+
+ []
+( hsa2054_a > 0 ) & ( hsa6844 > 0 ) & ( hsa6844_a < Max )
+-> (1) * hsa2054_a * hsa6844 :
+(hsa6844' = hsa6844-1) & (hsa6844_a' = hsa6844_a + 1);
+
+ []
+( hsa2054_a > 0 ) & ( hsa6616 > 0 ) & ( hsa6616_a < Max )
+-> (1) * hsa2054_a * hsa6616 :
+(hsa6616' = hsa6616-1) & (hsa6616_a' = hsa6616_a + 1);
+
+ []
+( hsa112755_a > 0) & ( action < Max_action )
+-> (1) * hsa112755_a :
+(hsa112755_a' = hsa112755_a - 1) & ( action' = action + 1);
+
+ []
+( hsa22999_a > 0) & ( action < Max_action )
+-> (1) * hsa22999_a :
+(hsa22999_a' = hsa22999_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6844_a > 0) & ( action < Max_action )
+-> (1) * hsa6844_a :
+(hsa6844_a' = hsa6844_a - 1) & ( action' = action + 1);
+
+ []
+( hsa6616_a > 0) & ( action < Max_action )
+-> (1) * hsa6616_a :
+(hsa6616_a' = hsa6616_a - 1) & ( action' = action + 1);
+
+ []
+( hsa1173_a > 0) & ( action < Max_action )
+-> (1) * hsa1173_a :
+(hsa1173_a' = hsa1173_a - 1) & ( action' = action + 1);
+
+ []
+( hsa2054_a > 0) & ( action < Max_action )
+-> (1) * hsa2054_a :
+(hsa2054_a' = hsa2054_a - 1) & ( action' = action + 1);
+
+endmodule
+
+rewards
+true:action;
+endrewards

@@ -1,0 +1,65 @@
+ctmc
+
+const int Max = 1;
+const int Max_action = 20;
+
+module hsa04974 
+hsa6505  : [0..Max] init 0;
+hsa6505_a  : [0..Max] init 0;
+hsa11136  : [0..Max] init 0;
+hsa11136_a  : [0..Max] init 0;
+hsa23428  : [0..Max] init 0;
+hsa23428_a  : [0..Max] init 0;
+hsa54407  : [0..Max] init 0;
+hsa54407_a  : [0..Max] init 0;
+hsa9056  : [0..Max] init 0;
+hsa9056_a  : [0..Max] init 0;
+hsa6564  : [0..Max] init 0;
+hsa6564_a  : [0..Max] init 0;
+hsa340024  : [0..Max] init 0;
+hsa340024_a  : [0..Max] init 0;
+hsa6510  : [0..Max] init 0;
+hsa6510_a  : [0..Max] init 0;
+hsa5644  : [0..Max] init 0;
+hsa5644_a  : [0..Max] init 0;
+hsa6519  : [0..Max] init 0;
+hsa6519_a  : [0..Max] init 0;
+hsa23439  : [0..Max] init 0;
+hsa23439_a  : [0..Max] init 0;
+hsa6520  : [0..Max] init 0;
+hsa6520_a  : [0..Max] init 0;
+hsa1504  : [0..Max] init 0;
+hsa1504_a  : [0..Max] init 0;
+hsa1506  : [0..Max] init 0;
+hsa1506_a  : [0..Max] init 0;
+hsa10136  : [0..Max] init 0;
+hsa10136_a  : [0..Max] init 0;
+hsa1357  : [0..Max] init 0;
+hsa1357_a  : [0..Max] init 0;
+hsa1360  : [0..Max] init 0;
+hsa1360_a  : [0..Max] init 0;
+hsa5222  : [0..Max] init 0;
+hsa5222_a  : [0..Max] init 0;
+hsa6550  : [0..Max] init 0;
+hsa6550_a  : [0..Max] init 0;
+hsa10008  : [0..Max] init 0;
+hsa10008_a  : [0..Max] init 0;
+hsa206358  : [0..Max] init 0;
+hsa206358_a  : [0..Max] init 0;
+hsa6543  : [0..Max] init 0;
+hsa6543_a  : [0..Max] init 0;
+hsa1803  : [0..Max] init 1;
+hsa1803_a  : [0..Max] init 0;
+hsa2006  : [0..Max] init 0;
+hsa2006_a  : [0..Max] init 0;
+hsa1277  : [0..Max] init 1;
+hsa1277_a  : [0..Max] init 0;
+hsa117247  : [0..Max] init 0;
+hsa117247_a  : [0..Max] init 0;
+action : [0..Max_action] init 0;
+
+
+endmodule
+rewards
+true:action;
+endrewards
